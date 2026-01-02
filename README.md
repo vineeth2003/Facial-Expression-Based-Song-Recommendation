@@ -1,65 +1,71 @@
-Facial Expression–Based Song Recommendation System
+<h1 align="center">🎵 Facial Expression–Based Song Recommendation System</h1>
+<p align="center">
+  An emotion-aware music recommendation system using Deep Learning and Computer Vision
+</p>
 
-This project presents a Facial Expression–Based Song Recommendation System that analyzes a user’s facial expression and recommends an appropriate set of songs based on the detected emotion. The system takes facial images as input, identifies the underlying emotion using a trained deep learning model, and maps the recognized emotion to a curated playlist.
+---
 
-The goal of this project is to create a personalized and emotion-aware music recommendation experience using computer vision and deep learning techniques.
+## 📌 Overview
 
-Dataset Description (aml_notes)
+This project presents a **Facial Expression–Based Song Recommendation System** that analyzes a user's facial expression and recommends an appropriate set of songs based on the detected emotion.
 
-The aml_notes file contains the facial expression image dataset used for training the model.
+The system takes **facial images as input**, identifies the underlying emotion using a **trained deep learning model**, and maps the recognized emotion to a **curated playlist**.
 
-The dataset consists of more than 3000 images representing various facial expressions.
+The goal of this project is to create a **personalized and emotion-aware music recommendation experience** using computer vision and deep learning techniques.
 
-These images were collected from Kaggle and are categorized into 7 different emotion classes.
+---
 
-The dataset serves as the foundation for training and validating the emotion classification model.
+## 📂 Dataset Description (`aml_notes`)
 
-Model Training (emotiondetector.ipynb)
+- 📸 Contains **3000+ facial expression images**
+- 😃 Represents **7 different emotion classes**
+- 🌐 Dataset sourced from **Kaggle**
+- 🧠 Used as the foundation for **training and validation** of the model
 
-The emotiondetector.ipynb notebook is responsible for training the facial expression recognition model.
+---
 
-Key Highlights:
+## 🧠 Model Training (`emotiondetector.ipynb`)
 
-A Convolutional Neural Network (CNN) is implemented using the Keras Sequential API.
+This notebook is responsible for **training the facial expression recognition model**.
 
-The network architecture includes:
+### 🔹 Key Highlights
 
-Convolutional layers with ReLU activation for feature extraction
+- Implemented a **Convolutional Neural Network (CNN)** using the **Keras Sequential API**
+- Architecture includes:
+  - Convolutional layers with **ReLU activation**
+  - **MaxPooling** layers to reduce spatial dimensions
+  - **Dropout** layers to prevent overfitting
+  - **Flatten** layers to convert feature maps into vectors
+  - **Dense (fully connected)** layers for classification
+- The model classifies facial expressions into **7 emotion categories**
+- Trained model is saved and used for **real-time emotion prediction**
 
-MaxPooling layers to reduce spatial dimensions
+---
 
-Dropout layers to prevent overfitting
+## 🎥 Real-Time Emotion Detection & Song Recommendation  
+### (`RealTimeFaceDetection3.ipynb`)
 
-Flatten layers to convert feature maps into vectors
+This notebook enables **real-time emotion recognition and song recommendation**.
 
-Dense (fully connected) layers for final classification
+### 🔹 Key Features
 
-The model is trained to classify facial expressions into 7 emotion categories.
+- 📷 Uses **OpenCV (`cv2`)** for real-time face detection via webcam
+- 🧠 Facial frames are processed and passed to the trained CNN model
+- 🎵 Uses a **Python dictionary** to map emotions to song playlists
+- ⚡ Instantly recommends songs based on detected facial expression
 
-After training, the model is saved and used for real-time emotion prediction.
+---
 
-Real-Time Emotion Detection & Song Recommendation (RealTimeFaceDetection3.ipynb)
+## 🛠️ Technologies Used
 
-The RealTimeFaceDetection3.ipynb notebook enables real-time emotion recognition and song recommendation.
+- 🐍 Python  
+- 🧠 TensorFlow / Keras  
+- 📷 OpenCV  
+- 🤖 Convolutional Neural Networks (CNN)  
+- 🌐 Kaggle Dataset  
 
-Key Features:
+---
 
-Uses OpenCV (cv2) for real-time face detection via a webcam.
-
-Captured facial frames are processed and passed to the trained CNN model for emotion prediction.
-
-A Python dictionary is used to map each detected emotion to a predefined list of songs.
-
-Based on the recognized facial expression, the system recommends a suitable set of songs instantly.
-
-Technologies Used
-
-Python
-
-TensorFlow / Keras
-
-OpenCV
-
-Convolutional Neural Networks (CNN)
-
-Kaggle Dataset
+<p align="center">
+  🚀 Built to explore the intersection of emotions, AI, and music
+</p>
